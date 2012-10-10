@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<title>Savant Tecnologia - 30/11/08 - Mão na Massa OpenLDAP</title>
+<meta name="title" content="30/11/08 - Mão na Massa OpenLDAP">
+<meta name="author" content="Administrator">
+<meta name="description" content="Joomla - Sistema de Portal Dinâmico e de Gerenciamento de Conteúdo">
+<meta name="keywords" content="Joomla, joomla">
+<meta name="Generator" content="Joomla! - Copyright (C) 2005 - 2006 Open Source Matters. All rights reserved.">
+<meta name="robots" content="index, follow">
+	<link rel="shortcut icon" href="http://www.savant.com.br/images/favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="maonamassa_files/template_css.css" type="text/css"><link rel="alternate" title="Savant Tecnologia" href="http://www.savant.com.br/index2.php?option=com_rss&amp;no_html=1" type="application/rss+xml">
+<link rel="alternate" type="application/rss+xml" title="Savant Tecnologia" href="http://www.savant.com.br/index.php?option=com_rss&amp;feed=RSS2.0&amp;no_html=1">
+<script language="JavaScript" type="text/javascript">
+    <!--
+    function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+      if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+        document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+      else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+    }
+    MM_reloadPage(true);
+    //-->
+  </script>
+</head><body class="body">
+<center>
+<div class="all">
+
+<div class="pway"><span class="pathway"><a href="http://www.savant.com.br/index.php" class="pathway">Início</a> <img src="maonamassa_files/arrow.png" alt="arrow"> <a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=1&amp;Itemid=2" class="pathway">Notícias</a> <img src="maonamassa_files/arrow.png" alt="arrow"> <a href="http://www.savant.com.br/index.php?option=com_content&amp;task=category&amp;sectionid=1&amp;id=1&amp;Itemid=2" class="pathway">Notícias</a> <img src="maonamassa_files/arrow.png" alt="arrow">   30/11/08 - Mão na Massa OpenLDAP </span></div>
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+    			<tbody><tr>
+    				<td valign="top"><img src="maonamassa_files/header_left.jpg"></td>
+    				<td class="logo" width="80%">
+    				<!--logo-->
+					</td>
+					<td align="right">
+					<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" id="savant" align="right" width="372" height="163">
+<param name="allowScriptAccess" value="sameDomain">
+<param name="movie" value="http://www.saad.inf.br/savant/templates/themza_j10_02/images/savant.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff"><embed src="maonamassa_files/savant.swf" quality="high" bgcolor="#ffffff" name="savant" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" width="372" height="163">
+</object>
+					</td>
+					<td valign="top"><img src="maonamassa_files/header_right.jpg"></td>
+				</tr>
+                                <tr>
+                                  <td colspan="4">
+                                      <div class="div">
+<div id="menu">
+	<div class="menuc">
+		<div id="topnavi">
+			<ul>
+			<li><a href="http://www.savant.com.br/index.php?option=com_frontpage&amp;Itemid=1"><span>Início</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=view&amp;id=6&amp;Itemid=17"><span>Empresa</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=1&amp;Itemid=2" class="current"><span>Notícias</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=view&amp;id=4&amp;Itemid=5"><span>Parceiros</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_exposeprive&amp;Itemid=6"><span>Galeria de Fotos</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=6&amp;Itemid=7"><span>Treinamento</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=6&amp;Itemid=8"><span>Eventos</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=3&amp;Itemid=9"><span>Produtos</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=4&amp;Itemid=10"><span>Serviços</span></a></li><li><a href="http://www.savant.com.br/index.php?option=com_contact&amp;Itemid=16"><span>Fale conosco</span></a></li>			</ul>
+		</div>		
+	</div>
+</div>
+</div>                                  </td>
+                                </tr>
+			</tbody></table>
+<div id="container">
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+	<td class="leftcol" valign="top">
+					<table class="moduletable" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+				<th valign="top">
+					Menu Principal				</th>
+			</tr>
+					<tr>
+			<td>
+				
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_frontpage&amp;Itemid=1" class="mainlevel">Início</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=view&amp;id=6&amp;Itemid=17" class="mainlevel">Empresa</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=1&amp;Itemid=2" class="mainlevel" id="active_menu">Notícias</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=view&amp;id=4&amp;Itemid=5" class="mainlevel">Parceiros</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_exposeprive&amp;Itemid=6" class="mainlevel">Galeria de Fotos</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=6&amp;Itemid=7" class="mainlevel">Treinamento</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=6&amp;Itemid=8" class="mainlevel">Eventos</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=3&amp;Itemid=9" class="mainlevel">Produtos</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_content&amp;task=section&amp;id=4&amp;Itemid=10" class="mainlevel">Serviços</a></td></tr>
+<tr align="left"><td><a href="http://www.savant.com.br/index.php?option=com_contact&amp;Itemid=16" class="mainlevel">Fale conosco</a></td></tr>
+</tbody></table>			</td>
+		</tr>
+		</tbody></table>
+				<table class="moduletable" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+			<td>
+							</td>
+		</tr>
+		</tbody></table>
+			</td>
+	<td class="maincol" valign="top">
+		<div>
+						<table class="contentpaneopen">
+			<tbody><tr>
+								<td class="contentheading" width="100%">
+					30/11/08 - Mão na Massa OpenLDAP									</td>
+								<td class="buttonheading" align="right" width="100%">
+					<a href="http://www.savant.com.br/index2.php?option=com_content&amp;task=view&amp;id=5&amp;pop=1&amp;page=0&amp;Itemid=2" target="_blank" onclick="window.open('http://www.savant.com.br/index2.php?option=com_content&amp;task=view&amp;id=5&amp;pop=1&amp;page=0&amp;Itemid=2','win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" title="Imprimir">
+						<img src="maonamassa_files/printButton.png" alt="Imprimir" name="Imprimir" align="middle" border="0"></a>
+				</td>
+							<td class="buttonheading" align="right" width="100%">
+				<a href="http://www.savant.com.br/index2.php?option=com_content&amp;task=emailform&amp;id=5&amp;itemid=2" target="_blank" onclick="window.open('http://www.savant.com.br/index2.php?option=com_content&amp;task=emailform&amp;id=5&amp;itemid=2','win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=400,height=250,directories=no,location=no'); return false;" title="E-mail">
+					<img src="maonamassa_files/emailButton.png" alt="E-mail" name="E-mail" align="middle" border="0"></a>
+			</td>
+						</tr>
+			</tbody></table>
+			
+		<table class="contentpaneopen">
+				<tbody><tr>
+			<td colspan="2" valign="top">
+				<table class="htmtableborders" border="0" width="100%" height="3619">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 36pt; color: rgb(102, 102, 102);"><b>OpenLDAP</b></span></span></span></span></td>
+			<td style="color: rgb(0, 0, 0); font-family: arial,helvetica,sans-serif; text-align: center;"><span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Configurando um serviço de Diretórios</span></span></span></span></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="vertical-align: top;">
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-size: 10pt;">O
+objetivo deste artigo não é ser um tutorial. Apenas estou tornando
+disponível os arquivos utilizados durante o treinamento e um roteiro
+rápido do que é abordado no curso. Aproveite.</span>
+			</p>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Instalando os pacotes necessários</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">A
+primeira etapa de nosso treinamento é instalar o servdor OpenLDAP e os
+pacotes complementares para o funcionamento do Diretório. A seguir você
+verá os passos necessários para a distribuição Debian, utilizada
+durante o treinamento, e para o Fedora/RedHat.</span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">O
+servidor OpenLDAP é capaz de funcionar corretamente instalando apenas
+os pacotes do servidor e do client, contudo, para podermos
+administrá-lo corretamente devemos instalar alguns pacotes
+complementares.</span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Instalação em Debian </span>
+			</p>
+			<blockquote>
+				<span style="font-size: 10pt; font-family: courier new,courier;"># <b>apt-get install slapd ldap-utils db4.2-util</b></span>&nbsp;
+			</blockquote>
+			<p>
+			<span style="font-size: 10pt;">
+			No Fedora/RedHat utilizamos o <span style="font-family: courier new,courier;">yum </span>como comando de instalação:</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt;"><span style="font-family: courier new,courier;"># <b>yum install openldap-servers openldap-clients db4-utils</b></span></span>
+				</p>
+			</blockquote>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Configuração do servidor slapd</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Aqui você vê a configuração inicial do servidor OpenLDAP que, no Debian, fica armazenada em <span style="font-family: courier new,courier;">/etc/ldap/slapd.conf</span>. No Fedora/RedHat você encontrará este arquivo na pasta </span><span style="font-size: 10pt; font-family: courier new,courier;">/etc/openldap</span><span style="font-size: 10pt;">. </span>
+			</p>
+			<blockquote>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Versão de Protocolo para consultas ao LDAP</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				allow bind_v2</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Schemas</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				include&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; /etc/ldap/schema/core.schema</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				include&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; /etc/ldap/schema/cosine.schema</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				include&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; /etc/ldap/schema/nis.schema</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				include&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; /etc/ldap/schema/inetorgperson.schema</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Arquivos de controle dos processos</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				pidfile&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; /var/run/slapd/slapd.pid</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				argsfile&nbsp;&nbsp;&nbsp; /var/run/slapd/slapd.args</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Módulos<br>
+				# No Fedora/RedHat você deve comentar<br>
+				# as duas linhas abaixo</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				modulepath&nbsp;&nbsp;&nbsp; /usr/lib/ldap</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				moduleload&nbsp;&nbsp;&nbsp; back_hdb</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;"><br>
+				# Controle de acesso<br>
+				# acesso à estrutura básica do Diretório<br>
+				access to dn.exact=""<br>
+				&nbsp;&nbsp;&nbsp; by * read<br>
+				<br>
+				# Apenas o próprio usuário pode ver/alterar a senha<br>
+				access to attrs=userPassword<br>
+				&nbsp;&nbsp;&nbsp; by self write<br>
+				&nbsp;&nbsp;&nbsp; by anonymous auth<br>
+				&nbsp;&nbsp;&nbsp; by * none<br>
+				<br>
+				# Libera consulta a todos os outros dados de nossa base<br>
+				access to *<br>
+				&nbsp;&nbsp;&nbsp; by * read<br>
+				<br>
+				</span>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Definição do nível de log</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				loglevel&nbsp;&nbsp;&nbsp; stats</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Base de dados</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				database&nbsp;&nbsp;&nbsp; hdb</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Estrutura do diretório e administrador</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				suffix&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "dc=empresa,dc=com,dc=br"</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				rootdn&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "cn=Manager,dc=empresa,dc=com,dc=br"<br>
+				# A senha a seguir é <b>tux</b> e foi criada com o slappasswd</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				rootpw&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Local de armazenamento dos dados</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				directory&nbsp;&nbsp;&nbsp; /var/lib/ldap</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				# Índices de pesquisa</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">
+				index&nbsp;&nbsp;&nbsp; objectClass&nbsp;&nbsp;&nbsp; eq</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">index&nbsp;&nbsp;&nbsp; cn,sn,mail&nbsp;&nbsp;&nbsp;&nbsp; eq,sub,approx<br>
+				index&nbsp; &nbsp; uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eq,sub</span><br>
+			</blockquote>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Criando os arquivos ldif iniciais</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">O
+exemplo de estrutura apresentada a seguir e que será utilizada em nosso
+Diretório segue o modelo DNS utilizando a identificação DC.</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt; font-family: courier new,courier;">dc=empresa,dc=com,dc=br<br>
+				&nbsp;&nbsp; |- </span><span style="font-size: 10pt; font-family: courier new,courier;">ou=grupos<br>
+				&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; |- cn=grupo1<br>
+				&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; `- cn=grupo2<br>
+				</span><span style="font-size: 10pt; font-family: courier new,courier;">&nbsp;&nbsp; `- </span><span style="font-size: 10pt; font-family: courier new,courier;">ou=usuarios<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |- uid=claudia<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `- uid=marcos</span>
+				</p>
+			</blockquote>
+			<p>
+			<span style="font-size: 10pt;">Para implementarmos este modelo, vamos criar o arquivo ldif apresentado a seguir com toda nossa estrutura.</span>
+			</p>
+			<blockquote>
+				<span style="font-size: 10pt; font-family: courier new,courier;"># arquivo empresa.ldif<br>
+				# início da estrutura (DIT)</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">dn: dc=empresa,dc=com,dc=br</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">objectClass: top</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">objectClass: dcObject</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">objectClass: organization</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">o: Empresa Ltda</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">dc: empresa</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;"><br>
+				# unidades<br>
+				dn: ou=usuarios,dc=empresa,dc=com,dc=br<br>
+				objectClass: top<br>
+				objectClass: organizationalUnit<br>
+				ou: Usuarios<br>
+				<br>
+				dn: ou=grupos,dc=empresa,dc=com,dc=br<br>
+				objectClass: top<br>
+				objectClass: organizationalUnit<br>
+				ou: grupos<br>
+				</span><span style="font-size: 10pt; font-family: courier new,courier;"><br>
+				# usuários<br>
+				dn: uid=claudia,ou=usuarios,dc=empresa,dc=com,dc=br<br>
+				objectClass: top<br>
+				objectClass: person<br>
+				objectClass: organizationalPerson<br>
+				objectClass: inetOrgPerson<br>
+				uid: claudia<br>
+				cn: Claudia Tomie<br>
+				sn: Tomie<br>
+				mail: 
+ <script language="JavaScript" type="text/javascript">
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy90104 = 'ct&#111;m&#105;&#101;' + '&#64;';
+ addy90104 = addy90104 + '&#101;mpr&#101;s&#97;' + '&#46;' + 'c&#111;m' + '&#46;' + 'br';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy90104 + '\'>' );
+ document.write( addy90104 );
+ document.write( '<\/a>' );
+ //-->\n </script><a href="mailto:ctomie@empresa.com.br">ctomie@empresa.com.br</a><script language="JavaScript" type="text/javascript">
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script><span style="display: none;">Este
+endereço de e-mail está protegido contra spam bots, pelo que o
+Javascript terá de estar activado para poder visualizar o endereço de
+email <script language="JavaScript" type="text/javascript">
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script></span><br>
+				userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH<br>
+				</span><br>
+				<span style="font-size: 10pt; font-family: courier new,courier;">dn: uid=marcos,ou=usuarios,dc=empresa,dc=com,dc=br<br>
+				objectClass: top<br>
+				objectClass: person<br>
+				objectClass: organizationalPerson<br>
+				objectClass: inetOrgPerson<br>
+				uid: marcos<br>
+				cn: Marcos Sungaila<br>
+				sn: Sungaila<br>
+				mail: 
+ <script language="JavaScript" type="text/javascript">
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy9489 = 'm&#97;rc&#111;s' + '&#64;';
+ addy9489 = addy9489 + '&#101;mpr&#101;s&#97;' + '&#46;' + 'c&#111;m' + '&#46;' + 'br';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy9489 + '\'>' );
+ document.write( addy9489 );
+ document.write( '<\/a>' );
+ //-->\n </script><a href="mailto:marcos@empresa.com.br">marcos@empresa.com.br</a><script language="JavaScript" type="text/javascript">
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script><span style="display: none;">Este
+endereço de e-mail está protegido contra spam bots, pelo que o
+Javascript terá de estar activado para poder visualizar o endereço de
+email <script language="JavaScript" type="text/javascript">
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script></span><br>
+				userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH<br>
+				</span>
+			</blockquote>
+			<p>
+			<span style="font-size: 10pt;">
+			Agora os dados devem ser inseridos no Diretório. Vamos utilizar o comando <span style="font-family: courier new,courier;">ldapadd </span>para isto:&nbsp;
+			</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt;"><span style="font-family: courier new,courier;"># <b>ldapadd -x -D cn=manager,dc=empresa,dc=com,dc=br -W -f \ empresa.ldif</b></span></span>
+				</p>
+			</blockquote>
+			<p>
+			<span style="font-size: 10pt;">O arquivo utilizado para inserir novos usuários para pesquisa pode ser baixado <a href="http://www.savant.com.br/download/pesquisa.ldif" target="_blank">aqui</a> .&nbsp; </span>
+			</p>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Alterando dados de usuários</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Para
+modificar os dados de usuários podemos criar os arquivos ldif somente
+com as informações a serem alteradas ou um arquivo completo com todos
+os dados existentes mais os dados novos. Os exercícios para modificar
+os dados da usuária Adriana e do usuário Glauco podem ser realizados
+com o ldif a seguir, sendo que vou marcar em negrito os dados que estão
+sendo moficados ou inseridos:</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt;"><span style="font-family: courier new,courier;">dn: uid=Adriana,ou=Usuarios,dc=empresa,dc=com,dc=br<br>
+				uid: Adriana<br>
+				cn: Adriana Ramos<br>
+				sn: Ramos<br>
+				objectClass: top<br>
+				objectClass: person<br>
+				objectClass: organizationalPerson<br>
+				objectClass: inetOrgPerson<br>
+				<b>description: Secretaria</b><br>
+				<br>
+				dn: uid=Glauco,ou=Usuarios,dc=empresa,dc=com,dc=br<br>
+				uid: Glauco<br>
+				cn: Glauco Bernini<br>
+				sn: Bernini<br>
+				objectClass: top<br>
+				objectClass: person<br>
+				objectClass: organizationalPerson<br>
+				objectClass: inetOrgPerson<br>
+				<b>telephoneNumber: 2345-6789<br>
+				mobile: 9876-5432</b></span></span> 
+				</p>
+			</blockquote>
+			<p>
+			<span style="font-size: 10pt;">Aplique as mudanças com o comando ldapmodify como segue:</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt;"><span style="font-family: courier new,courier;"># <b>ldapmodify -x -D cn=manager,dc=empresa,dc=com,dc=br -W \ -f mudancas.ldif</b></span></span> 
+				</p>
+			</blockquote>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Alterando a quantidade de cache utilizado pelo OpenLDAP</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">O
+servidor OpenLDAP utiliza memória RAM como cache para acelerar o acesso
+às informações do Diretório. A quantidade de memória alocada como cache
+e alguns outros parâmetros poderm ser definidos em um arquivo chamado <span style="font-family: courier new,courier;">DB_CONFIG</span> que fica na pasta <span style="font-family: courier new,courier;">/var/lib/ldap</span>. Você pode criar este arquivo com o conteúdo a seguir:</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt; font-family: courier new,courier;"># Área de dados em memória (2M).<br>
+				set_cachesize 0 2097152 0<br>
+				<br>
+				# Cache para nomes de arquivos<br>
+				set_lg_regionmax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1048576<br>
+				<br>
+				# Define o tamanho máximo do log de transações<br>
+				set_lg_max&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10485760<br>
+				<br>
+				# Cache do log de transações em memória (2M)<br>
+				set_lg_bsize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2097152</span> 
+				</p>
+			</blockquote>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Arquivos criados durante o treinamento</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">A apresentação utilizada durante o treinamento pode ser baixada <a href="http://www.savant.com.br/download/mao-na-massa/openldap-mao-na-massa-rev13.pdf" target="_blank">aqui</a> .</span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Durante o <b>Mão na Massa</b>
+criamos vários arquivos do tipo ldif e alteramos várias configurações.
+A seguir você tem todos os arquivos listados e pode baixá-los se quiser.</span>
+			</p>
+			<blockquote>
+				<p>
+				<span style="font-size: 10pt;"><span style="color: rgb(153, 153, 153);"><a href="http://www.savant.com.br/download/mao-na-massa/claudia.ldif" target="_self">claudia.ldif</a></span>  - arquivo com os dados para a criação da usuária Cláudia no Diretório</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/common-account" target="_self">common-account</a>  - arquivo de configuração do pam</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/common-auth" target="_self">common-auth</a>  - arquivo de configuração do pam</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/common-password" target="_self">common-password</a>  - arquivo de configuração do pam</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/common-session" target="_self">common-session</a>  - arquivo de configuração do pam</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/empresa.ldif" target="_self">empresa.ldif</a>  - arquivo com os dados para a criação da estrutura inicial do Diretório (DIT)</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/ldap.conf" target="_self">ldap.conf.pag13</a>  - configuração das ferramentas client do OpenLDAP</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/ldap.conf.pag36" target="_self">ldap.conf.pag36</a>  - configuração das ferramentas client do OpenLDAP</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/marcos.ldif" target="_self">marcos.ldif</a>  - arquivo com os dados para a criação do usuário Marcos no Diretório</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/modifica-adriana-glauco.ldif" target="_self">modifica-adriana-glauco.ldif</a>  - ldif para alteração dos dados destes usuários</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/msungaila.ldif" target="_self">msungaila.ldif</a>  - dados para a criação de um usuário padrão posix no Diretório</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/nsswitch.conf" target="_self">nsswitch.conf</a>  - arquivo de configuração para pesquisa de informações pelo Linux</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/pesquisa.ldif" target="_self">pesquisa.ldif</a>  - arquivo com usuários adicionais utilizados para os exercícios com o ldapsearch</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/rebuild.ldif" target="_self">rebuild.ldif</a>  - arquivo com toda a estrutura do Diretório para reconstrução da árvore</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/slapd.conf.pag6" target="_self">slapd.conf.pag6</a>  - configuração do servidor</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/slapd.conf.pag7" target="_self">slapd.conf.pag7</a>  - configuração do servidor</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/slapd.conf.pag21" target="_self">slapd.conf.pag21</a>  - configuração do servidor</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/slapd.conf.pag24" target="_self">slapd.conf.pag24</a>  - configuração do servidor</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/slapd.conf.pag35" target="_self">slapd.conf.pag35</a>  - configuração do servidor</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/unidades.ldif" target="_self">unidades.ldif</a>  - arquivos com os dados para a criação das OUs no Diretório</span>
+				</p>
+				<p>
+				<span style="font-size: 10pt;"><a href="http://www.savant.com.br/download/mao-na-massa/usuarios.ldif" target="_self">usuarios.ldif</a>  - arquivo com os dados para a criação de usuários no Diretório</span> 
+				</p>
+			</blockquote>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-family: Arial,Helvetica,sans-serif;"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(9, 144, 214);"><span style="font-size: 8pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(102, 102, 102);"><span style="font-size: 12pt; font-family: Verdana,Arial,Helvetica,sans-serif; color: rgb(0, 110, 159);">Conclusão</span></span></span></span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Além destes tópicos, durante o treinamento <b>Mão na Massa</b> da <span style="color: rgb(51, 102, 255);"><a href="http://www.temporealeventos.com.br/?area=74" target="_blank">Tempo Real Eventos</a></span>  abordamos ainda a autenticação dos usuários do Diretório diretamente no Linux e o uso de criptografia no servidor.</span>
+			</p>
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Até mais</span>
+			</p>
+			<p>
+			<span style="font-size: 10pt;">Marcos Sungaila </span>
+			</p>
+			<p>
+			&nbsp;
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+			</td>
+		</tr>
+				</tbody></table>
+		
+		<span class="article_seperator">&nbsp;</span>
+		
+					<table style="margin-top: 25px;" align="center">
+			<tbody><tr>
+									<th class="pagenav_next">
+						<a href="http://www.savant.com.br/index.php?option=com_content&amp;task=view&amp;id=7&amp;Itemid=2">
+							Artigo seguinte &gt;</a>
+					</th>
+								</tr>
+			</tbody></table>
+						<div class="back_button">
+				<a href="javascript:history.go(-1)">
+					[ Voltar ]</a>
+			</div>
+					</div>
+	</td>
+	<td class="rightcol" valign="top">
+				</td>
+	</tr>
+</tbody></table>
+<div class="footer_bg">
+<div class="footer">
+<div align="center">
+	© 2008 Savant Tecnologia</div>
+
+<div align="center">
+	<a href="http://www.joomla.org/">Joomla!</a> is Free Software released under the GNU/GPL License.&nbsp;<a href="http://www.themza.com/joomla1.0/football-dreams-template.html" target="_blank" title="Football Dreams">Free Joomla 1.0 Template</a>, <a href="http://www.ntchosting.com/" target="_blank" title="hosting">web hosting</a>.&nbsp;</div></div>
+</div>
+<div style="background: rgb(87, 87, 87) none repeat scroll 0% 0%; height: 10px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></div>
+</div>
+</div>
+</center>
+<!-- 1228579066 --></body></html>

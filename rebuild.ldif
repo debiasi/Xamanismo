@@ -1,0 +1,43 @@
+dn: dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Empresa Ltda
+dc: empresa
+
+dn: ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: ou=grupos,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: organizationalUnit
+ou: grupos
+
+dn: uid=marcos,ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: marcos
+cn: Marcos Sungaila
+sn: Sungaila
+mail: marcos@savant.com.br
+userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH
+telephoneNumber: 5071-3112
+mobile: 92617623
+description: Instrutor
+
+dn: uid=claudia,ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: claudia
+cn: Claudia Tomie
+sn: Tomie
+mail: claudia@savant.com.br
+userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH
+
+

@@ -1,0 +1,23 @@
+dn: cn=msungaila,ou=grupos,dc=empresa,dc=com,dc=br
+cn: msungaila
+gidNumber: 5001
+objectClass: posixGroup
+objectClass: top
+
+dn: uid=msungaila,ou=usuarios,dc=empresa,dc=com,dc=br
+givenName: Marcos
+sn: Sungaila
+cn: Marcos Sungaila
+uid: msungaila
+userPassword: {MD5}WrbkuYvH+3FvwH7Zj+34Ag==
+uidNumber: 5001
+gidNumber: 5001
+loginShell: /bin/bash
+homeDirectory: /home/msungaila
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+

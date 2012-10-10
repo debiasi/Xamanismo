@@ -1,0 +1,2 @@
+session required   pam_mkhomedir.so skel=/etc/skel umask=0022 silent
+session sufficient pam_unix.so

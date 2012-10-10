@@ -1,0 +1,48 @@
+# Versão de Protocolo para consultas ao LDAP
+allow bind_v2
+
+# Schemas
+include		/etc/ldap/schema/core.schema
+include		/etc/ldap/schema/cosine.schema
+include		/etc/ldap/schema/nis.schema
+include		/etc/ldap/schema/inetorgperson.schema
+
+# Arquivos de controle dos processos
+pidfile		/var/run/slapd/slapd.pid
+argsfile	/var/run/slapd/slapd.args
+
+# Módulos – localização e ativação
+modulepath	/usr/lib/ldap
+moduleload	back_hdb
+
+# Controle de acesso
+# acesso à estrutura básica do Diretório
+access to dn.exact=""
+	by * read
+
+# Apenas o próprio usuário pode ver/alterar a senha além do Manager
+access to attrs=userPassword
+	by self write
+	by anonymous auth
+	by * none
+
+# Libera consulta a todos os outros dados de nossa base
+access to *
+	by * read
+
+# Definição do nível de log
+loglevel	stats
+
+# Base de dados
+database	hdb
+
+# Estrutura do diretório e administrador
+suffix		"dc=empresa,dc=com,dc=br"
+rootdn		"cn=Manager,dc=empresa,dc=com,dc=br"
+rootpw		{SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH
+
+# Local de armazenamento dos dados
+directory	/var/lib/ldap
+
+# Índices de pesquisa
+index	objectClass	eq

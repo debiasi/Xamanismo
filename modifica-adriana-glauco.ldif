@@ -1,0 +1,20 @@
+dn: uid=Adriana,ou=Usuarios,dc=empresa,dc=com,dc=br
+uid: Adriana
+cn: Adriana Ramos
+sn: Ramos
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+description: Secretaria
+
+dn: uid=Glauco,ou=Usuarios,dc=empresa,dc=com,dc=br
+uid: Glauco
+cn: Glauco Bernini
+sn: Bernini
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+telephoneNumber: 2345-6789
+mobile: 9876-5432 

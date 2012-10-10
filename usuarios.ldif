@@ -1,0 +1,23 @@
+# usuarios.ldif
+dn: uid=marcos,ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: marcos
+cn: Marcos Sungaila
+sn: Sungaila
+mail: marcos@savant.com.br
+userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH
+
+dn: uid=claudia,ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: claudia
+cn: Claudia Tomie
+sn: Tomie
+mail: claudia@savant.com.br
+userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH
+

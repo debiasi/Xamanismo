@@ -1,0 +1,7 @@
+
+
+
+rootpw      {SSHA}j7RK/d+7135Z5kBh+WHgPUZhldl/Xi0X
+
+:r !slappasswd -s tux
+

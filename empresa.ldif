@@ -1,0 +1,7 @@
+# empresa.ldif
+dn: dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Empresa Ltda
+dc: empresa

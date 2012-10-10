@@ -1,0 +1,11 @@
+# unidades.ldif
+dn: ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: organizationalUnit
+ou: Usuarios
+
+dn: ou=grupos,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: organizationalUnit
+ou: grupos
+

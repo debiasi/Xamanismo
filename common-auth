@@ -1,0 +1,4 @@
+auth    required   pam_nologin.so
+auth    required   pam_env.so
+auth    sufficient pam_unix.so
+auth    required   pam_ldap.so nullok_secure try_first_pass

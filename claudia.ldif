@@ -1,0 +1,11 @@
+dn: uid=claudia,ou=usuarios,dc=empresa,dc=com,dc=br
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: claudia
+cn: Claudia Tomie
+sn: Tomie
+mail: claudia@savant.com.br
+userPassword: {SSHA}hAJl1PZmY41M94c7TgqQF6ocIGziKsYH
+
